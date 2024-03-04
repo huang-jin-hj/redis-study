@@ -1,11 +1,20 @@
 package ZSet;
 
 public class ZSkipListNode {
+
     ZSkipListNode backWord;
     String member;
     int score;
-
     ZSkipListLevel[] zSkipListLevels;
+
+    public ZSkipListNode() {
+    }
+
+    public ZSkipListNode(String member, int score) {
+        this.member = member;
+        this.score = score;
+    }
+
 
     public ZSkipListNode getBackWord() {
         return backWord;
@@ -39,7 +48,7 @@ public class ZSkipListNode {
         this.zSkipListLevels = zSkipListLevels;
     }
 
-    private static class ZSkipListLevel{
+    public static class ZSkipListLevel{
         ZSkipListNode forward;
         int span;
 
